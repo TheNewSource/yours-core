@@ -15,7 +15,9 @@
     "serve-localapi-mainnet": "YOURS_CORE_BLOCKCHAIN_API_URI=http://localhost:3001/insight-api/ ./node_modules/.bin/gulp serve",
     "serve-localapi-testnet": "FULLNODE_NETWORK=testnet YOURS_CORE_BLOCKCHAIN_API_URI=http://localhost:3002/insight-api/ ./node_modules/.bin/gulp serve",
     "serve-mainnet": "./node_modules/.bin/gulp serve",
-    "serve-testnet": "FULLNODE_NETWORK=testnet YOURS_CORE_BLOCKCHAIN_API_URI=https://test-insight.bitpay.com/api/ ./node_modules/.bin/gulp serve"
+    "serve-testnet": "FULLNODE_NETWORK=testnet YOURS_CORE_BLOCKCHAIN_API_URI=https://test-insight.bitpay.com/api/ ./node_modules/.bin/gulp serve",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=4.3.0"
@@ -120,7 +122,8 @@
     "http-proxy": "1.13.2",
     "isomorphic-fetch": "2.2.1",
     "pouchdb": "5.3.1",
-    "pouchdb-find": "0.9.0"
+    "pouchdb-find": "0.9.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-core": "6.7.6",
@@ -145,5 +148,6 @@
     "should": "8.3.0",
     "sinon": "1.17.3",
     "standard": "6.0.8"
-  }
+  },
+  "snyk": true
 }
